@@ -316,6 +316,8 @@ body{
    transition: 0.3s;
 }
 /* ----------CARTA------------ */
+
+
 .menu-container{
    /* background-color: rgb(168, 150, 150); */
    /* background-color: #212529; */
@@ -431,32 +433,6 @@ body{
 .card-description p{
    text-align: center;
    
-}
-
-.card-price{
-   display: flex;
-   height: 15%;
-   justify-content: center;
-   align-items: end;
-   border-bottom: solid 0.5px black;
-   border-radius: 3%;
-}
-.card-pun{
-   display: flex;
-   height: 10%;
-   border-radius: 6%;
-   justify-content: right; 
-}
-
-.card-pun p{
-   font-size: 1.3rem;
-   padding-top: 0.5rem;
-   padding-right: 0.6rem;
-}
-.card-pun i{
-   font-size: 1.5rem;
-   color: #ffee00;
-   margin-left: 0.3rem;
 }
 
 /* ---------- CARRUSEL DE COMENTARIOS ---------- */

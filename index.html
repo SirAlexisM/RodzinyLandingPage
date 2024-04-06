@@ -79,6 +79,10 @@
     <h2>nuestro menú</h2>
   </div>
   <section class="menu-container">
+    <div class="controls">
+      <button class="control-btn prev">&lt;</button>
+      <button class="control-btn next">&gt;</button>
+    </div>
     <div class="menu-section">
       <div class="menu-title" id="pastas">
         <h2>pastas</h2>
@@ -94,9 +98,20 @@
           <p>pasta tipo Cintas Pasta tipo Cintas Pasta tipo Cintas </p>
         </div>
       </div> 
+      <div class="card-container">
+        <div class="card-img">
+          <img src="Rodziny/Imgs/Menu 1.jpg" alt="">
+        </div>
+        <div class="card-description">
+          <div class="card-d-title">
+            <h5>tagliatelles Mixtos</h5>
+          </div>
+          <p>pasta tipo Cintas Pasta tipo Cintas Pasta tipo Cintas </p>
+        </div>
+      </div> 
     </div>
     <div class="menu-section">
-      <div class="menu-title" id="pastas">
+      <div class="menu-title" id="salsas">
         <h2>salsas</h2>
       </div>
       <div class="card-container">
@@ -219,6 +234,36 @@
         showImage(0); // Muestra la primera imagen al iniciar
         startCarousel();
     });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuContainer = document.querySelector('.menu-container');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+  
+      let scrollPosition = 0;
+  
+      nextBtn.addEventListener('click', function() {
+        scrollPosition += 320; // Ancho de cada card-container más margen
+        menuContainer.scroll({
+          top: 0,
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      });
+  
+      prevBtn.addEventListener('click', function() {
+        scrollPosition -= 320; // Ancho de cada card-container más margen
+        if (scrollPosition < 0) {
+          scrollPosition = 0;
+        }
+        menuContainer.scroll({
+          top: 0,
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 </body>
