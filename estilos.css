@@ -317,6 +317,31 @@ body{
 }
 /* ----------CARTA------------ */
 
+.control-btn {
+   background-color: #c84224; /* Color de fondo */
+   color: white; /* Color del texto */
+   border: none; /* Sin borde */
+   padding: 10px 15px; /* Espaciado interno */
+   border-radius: 5px; /* Borde redondeado */
+   font-size: 16px; /* Tamaño de la fuente */
+   cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+   transition: background-color 0.3s ease; /* Transición de color de fondo */
+   position: absolute; /* Establecer la posición absoluta para los botones */
+   top: 50%; /* Colocar los botones en el centro verticalmente */
+   transform: translateY(-50%); /* Ajustar verticalmente los botones */
+}
+
+.prev {
+   left: 10px; /* Ajustar la posición del botón izquierdo */
+}
+ 
+ .next {
+   right: 10px; /* Ajustar la posición del botón derecho */
+}
+ 
+.control-btn:hover {
+   background-color: #a6301b; /* Color de fondo al pasar el ratón */
+}
 
 .menu-container{
    /* background-color: rgb(168, 150, 150); */
@@ -343,6 +368,7 @@ body{
    display: flex;
    flex-wrap: wrap;
    width: 30%;
+   min-width: 18.5rem;
    justify-content: center;
    padding-bottom: 3rem;
    margin-right: 1rem;
@@ -353,6 +379,7 @@ body{
    /* border: solid 1px rgb(202, 195, 195); */
    border: solid 1px #c84224;
    border-radius: 20px;
+   position: relative; /* Establecer la posición relativa para los botones */
 }
 
 .menu-title{
@@ -375,7 +402,6 @@ body{
    cursor: pointer;
 }
 .card-container{
-   display: flex;
    height: 25rem;
    width: 18rem;
    background-color: white;
@@ -389,6 +415,11 @@ body{
    background-color: rgb(168, 150, 150);
    /* background-color: #beb2a6; */
    font-family: 'Alegreya Sans SC', sans-serif;
+   display: none;
+}
+
+.card-container.active{
+   display: flex; /* Mostrar la tarjeta activa */
 }
 
 .card-container:hover{
@@ -428,6 +459,8 @@ body{
 .card-d-title{
    padding-top: 2.5rem;
    padding-bottom: 1.5rem;
+   height: 10%;
+   text-align: center;
 }
 
 .card-description p{
@@ -597,12 +630,15 @@ body{
 /* QUERY PARA EL MENU ( GALAXY FOLD ) */
 @media (max-width: 350px){
    .menu-section {
-      width: 95%;
+      width: 90%;
+      min-width: none;
       margin-right: 0;
       margin-left: 0;
    }
    .card-container{
       width: 16rem;
+      padding-right: 0;
+      padding-left: 0;
    }
    
    .card-img img{
