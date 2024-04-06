@@ -317,6 +317,12 @@ body{
 }
 /* ----------CARTA------------ */
 
+.indicator {
+   text-align: center; /* Alinear al centro */
+   margin-top: 10px; /* Espacio superior */
+   font-size: 1.2rem;
+}
+
 .control-btn {
    background-color: #c84224; /* Color de fondo */
    color: white; /* Color del texto */
@@ -366,10 +372,12 @@ body{
 
 .menu-section {
    display: flex;
-   flex-wrap: wrap;
+   /* flex-wrap: wrap; */
+   flex-direction: column;
    width: 30%;
    min-width: 18.5rem;
    justify-content: center;
+   align-items: center;
    padding-bottom: 3rem;
    margin-right: 1rem;
    margin-left: 1rem;

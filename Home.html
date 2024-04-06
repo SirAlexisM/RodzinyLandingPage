@@ -74,6 +74,9 @@
     <h2>conoce mas sobre nosotros</h2>
     <img src="Rodziny/Imgs/Rodteam.jpg" alt="">
   </div>
+  <div class="history">
+      
+  </div>
   
   <div class="sobre-nosotros" id="Menu" style="padding-top: 4rem;">
     <hr>
@@ -88,6 +91,7 @@
       <div class="menu-title" id="pastas">
         <h2>pastas</h2>
       </div>
+      <div class="indicator">1..11</div>
       <div class="card-container active">
         <div class="card-img">
           <img src="Rodziny/Imgs/Menu 1.jpg" alt="">
@@ -119,6 +123,7 @@
       <div class="menu-title" id="salsas">
         <h2>salsas</h2>
       </div>
+      <div class="indicator">1..11</div>
       <div class="card-container active">
         <div class="card-img">
           <img src="Rodziny/Imgs/Menu 1.jpg" alt="">
@@ -142,6 +147,7 @@
         </div>
       </div> 
     </div> 
+    
   </section>
     
   <div class="gallery-title" id="Galeria">
@@ -253,7 +259,7 @@
     });
   </script>
   <script>
-       document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
   const prevButtons = document.querySelectorAll(".prev");
   const nextButtons = document.querySelectorAll(".next");
 
@@ -265,7 +271,7 @@
     nextButton.addEventListener("click", nextCard);
   });
 
-  function showCard(index, cardContainers) {
+  function showCard(index, cardContainers, indicator) {
     cardContainers.forEach((cardContainer, i) => {
       if (i === index) {
         cardContainer.classList.add("active");
@@ -273,19 +279,25 @@
         cardContainer.classList.remove("active");
       }
     });
+
+    // Actualizar el indicador
+    const totalCards = cardContainers.length;
+    const currentCard = index + 1;
+    indicator.textContent = `${currentCard}..${totalCards}`;
   }
 
   function nextCard(event) {
     const button = event.target;
     const menuSection = button.closest(".menu-section");
     const cardContainers = menuSection.querySelectorAll(".card-container");
+    const indicator = menuSection.querySelector(".indicator");
     let currentIndex = parseInt(menuSection.dataset.currentIndex) || 0;
 
     currentIndex++;
     if (currentIndex >= cardContainers.length) {
       currentIndex = 0;
     }
-    showCard(currentIndex, cardContainers);
+    showCard(currentIndex, cardContainers, indicator);
 
     menuSection.dataset.currentIndex = currentIndex;
   }
@@ -294,17 +306,19 @@
     const button = event.target;
     const menuSection = button.closest(".menu-section");
     const cardContainers = menuSection.querySelectorAll(".card-container");
+    const indicator = menuSection.querySelector(".indicator");
     let currentIndex = parseInt(menuSection.dataset.currentIndex) || 0;
 
     currentIndex--;
     if (currentIndex < 0) {
       currentIndex = cardContainers.length - 1;
     }
-    showCard(currentIndex, cardContainers);
+    showCard(currentIndex, cardContainers, indicator);
 
     menuSection.dataset.currentIndex = currentIndex;
   }
 });
+
 
     
   </script>
