@@ -10,6 +10,24 @@ body{
    font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+/* ---------- MODO OSCURO ---------- */
+
+.dark-mode{
+   background-color: #212529;
+}
+
+.dark-mode .history p {
+   color: rgb(195, 194, 194);
+}
+
+.dark-mode .location p{
+   color: rgb(195, 194, 194);
+}
+
+.dark-mode .indicator{
+   color: rgb(195, 194, 194);
+}
+
 /* ---------------------HOME--------------------- */
 
 .sobre-nosotros{
@@ -20,6 +38,7 @@ body{
    align-items: center;
    text-align: center;
    padding-top: 4rem;
+   color: black;
 }
 
 
@@ -195,6 +214,10 @@ body{
    text-align: center;
 }
 
+.history p{
+   color: black;
+}
+
 .history-content0{
    display: flex;
    width: 90%;
@@ -307,6 +330,17 @@ body{
 }
 
 /* ----------------------------------------------------------- MENU ----------------------------------------------------------- */
+
+.logo-div{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.apex{
+   width: 60%;
+   object-fit: cover;
+}
+
 .footmenu {
    display: flex;
    color: white;
@@ -318,6 +352,11 @@ body{
    padding-top: 1.5rem;
    padding-bottom: 1rem;
    border-top: solid 1px rgb(202, 195, 195);
+}
+
+.footmenu p a{
+   text-decoration: none;
+   color: white;
 }
 
 .footmenu hr{
@@ -334,7 +373,7 @@ body{
 }
 
 
-.footmenu a{
+.footmenu div a{
    color: white;
    font-size: 3rem;
    padding-bottom: 0.2rem;
@@ -354,6 +393,7 @@ body{
    text-align: center; /* Alinear al centro */
    margin-top: 10px; /* Espacio superior */
    font-size: 1.2rem;
+   font-weight: bold;
 }
 
 .control-btn {
@@ -507,7 +547,6 @@ body{
 
 .card-description p{
    text-align: center;
-   
 }
 
 /* Querys para la galeria de imagenes  */
