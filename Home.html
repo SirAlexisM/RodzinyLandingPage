@@ -36,8 +36,13 @@
             <a class="nav-link" href=#Ubicacion style="font-size: 1.5rem;" >ubicación</a>
           </li>               
           <li class="nav-item">
-            <a id="modoBoton" class="nav-link" href=# style="font-size: 1.5rem;" >modo oscuro 🌙</a>
+            <a id="modoBoton" class="nav-link" href=# style="font-size: 1.5rem;" >modo oscuro  🌙</a>
           </li>               
+          <li class="nav-item">
+            <div id="container">
+              <div class="toggle"></div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -516,7 +521,7 @@
     });
 
   </script>
-  <script>
+  <!-- <script>
           // Función para cambiar entre modo oscuro y claro
     function toggleDarkMode() {
         // Obtenemos el elemento body
@@ -551,7 +556,33 @@
     toggleDarkMode();
 
 
-  </script>
+  </script> -->
+  <!-- <script>
+    var toggle = document.getElementById('container');
+    
+
+    toggle.onclick = function(){
+      toggle.classList.toggle('active');
       
+    }
+  </script> -->
+  <script>
+    var toggle = document.getElementById('container');
+    var modoBoton = document.getElementById('modoBoton');
+
+    toggle.onclick = function(){
+        toggle.classList.toggle('active');
+        document.body.classList.toggle('dark-mode');
+    }
+
+    modoBoton.onclick = function(event){
+        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+        toggle.click(); // Simular clic en el toggle
+    }
+</script>
+
+
+
+  
 </body>
 </html>

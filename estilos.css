@@ -14,6 +14,10 @@ body{
 
 .dark-mode{
    background-color: #212529;
+   transition: background-color 0.8s ease;
+}
+body:not(.dark-mode) {
+   transition: background-color 0.8s ease;
 }
 
 .dark-mode .history p {
@@ -26,6 +30,41 @@ body{
 
 .dark-mode .indicator{
    color: rgb(195, 194, 194);
+}
+
+#container{
+   background-color: #f8f8f8;
+   position: relative;
+   width: 80px;
+   height: 32px;
+   /* box-shadow: inset 4px 4px 6px #cecece,
+               inset -4px -4px 6px #fff; */
+   margin: 0px;
+   margin-top: 0.6rem;
+   border-radius: 25px;
+   cursor: pointer;
+}
+
+.toggle{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 40px;
+   height: 32px;
+   transform: scale(.7);
+   background-color: linear-gradient(#D8D8D8, #FFFFFF);
+   border-radius: 25px;
+   box-shadow: 3px 3px 8px #c4c4c4,
+               -3px -3px 8px #fff;
+}
+
+#container.active .toggle{
+   left: 40px;
+   background-color: #ed4021;
+}
+
+#container.active {
+   background-color: #ed4021;
 }
 
 /* ---------------------HOME--------------------- */
