@@ -56,6 +56,7 @@ body:not(.dark-mode) {
    border-radius: 25px;
    box-shadow: 3px 3px 8px #c4c4c4,
                -3px -3px 8px #fff;
+   transition: left 0.5s ease;
 }
 
 #container.active .toggle{
