@@ -35,7 +35,7 @@ body:not(.dark-mode) {
 #container{
    background-color: #f8f8f8;
    position: relative;
-   width: 80px;
+   width: 60px;
    height: 32px;
    /* box-shadow: inset 4px 4px 6px #cecece,
                inset -4px -4px 6px #fff; */
@@ -60,7 +60,7 @@ body:not(.dark-mode) {
 }
 
 #container.active .toggle{
-   left: 40px;
+   left: 20px;
    background-color: #ed4021;
 }
 
