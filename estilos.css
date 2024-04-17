@@ -585,6 +585,10 @@ body:not(.dark-mode) {
    text-align: center;
 }
 
+.card-d-title h5{
+   font-size: 1.3rem;
+}
+
 .card-description p{
    text-align: center;
 }
