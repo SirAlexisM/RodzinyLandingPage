@@ -517,9 +517,21 @@
         toggle.click(); // Simular clic en el toggle
     }
   </script>
-
-
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Cerrar la barra de navegación al hacer clic fuera de ella
+      document.addEventListener('click', function(event) {
+        var isClickInsideNavbar = document.getElementById('navb').contains(event.target);
+        if (!isClickInsideNavbar) {
+          var navbarToggler = document.querySelector('.navbar-toggler');
+          var navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+            navbarToggler.click();
+          }
+        }
+      });
+    });
+    </script>
   
 </body>
 </html>
